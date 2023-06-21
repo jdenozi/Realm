@@ -1,0 +1,174 @@
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+    --card-border-color: #000;
+    --card-border-thickness: 14px;
+    --card-border-radius: 10px;
+    --bars-background: #debca7;
+    --inner-borders-color: #bd4129;
+    --inner-borders-thickness: 3px;
+    --bar-color-border: var(--bars-background);
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 418px;
+    top: 50%;
+    left: 50%;
+    border-radius: var(--card-border-radius);
+    box-shadow: inset 0 0 0 var(--card-border-thickness) var(--card-border-color);
+    padding: var(--card-border-thickness);
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7%;
+    margin-bottom: 3%;
+    padding: 1% 4%;
+    box-shadow: 0 0 0 var(--inner-borders-thickness) black;
+    border-radius: 3% / 10%;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 0.7em; /* Adjust the font size as desired */
+    line-height: 1;
+    z: 1;
+    background-color: var(--bars-background);
+
+}
+
+number-circle {
+    width: 30px; /* Adjust the width as desired */
+    height: 30px; /* Adjust the height as desired */
+    background-color: #999; /* Adjust the color as desired */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Adjust the text color as desired */
+    font-weight: bold;
+    font-size: 14px; /* Adjust the font size as desired */
+}
+
+.casting-cost {
+    display: flex;
+    gap: 2px;
+}
+
+.sprite {
+    border-radius: 50%;
+    background-image: url(https://mtgcardsmith.com/view/images/cards/m15/mana/spritesheet.png);
+}
+
+.sprite-1 {
+    width: 15px;
+    height: 15px;
+    background-position: -30px -5px;
+}
+
+.sprite-mana_r {
+    width: 14px;
+    height: 15px;
+    background-position: -53px -105px;
+}
+
+.bar-top {
+    margin-top: 10px;
+}
+
+.card-title {
+    letter-spacing: 1px;
+}
+
+
+.icon {
+    width: 15px;
+    height: 15px;
+    background-image: url(https://media.mtgsalvation.com/attachments/28/45/635032479426660433.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-image {
+    position: relative;
+    margin: 0 12px;
+    margin-top: var(--inner-borders-thickness);
+    margin-bottom: calc(-1 * var(--inner-borders-thickness) - 1px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 55%;
+    border-radius: var(--card-border-radius);
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    margin: 10px 12px 0; /* Added margin-top of 10px */
+    height: 23%;
+    box-shadow: 0 0 0 var(--inner-borders-thickness) black;
+    background-color: var(--bars-background);
+    font-size: 0.7em;
+    border-radius: 3% / 10%;
+    text-align: justify;
+    padding: 7px;
+}
+
+.card-quote {
+    font-style: italic;
+    font-size: 0.9em;
+    line-height: 1;
+}
+
+.power {
+    background: #debca7;
+    text-align: center;
+    border-radius: var(--card-border-radius);
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    width: 50px;
+    height: 20px;
+    box-shadow: 0 0 0 var(--inner-borders-thickness) black;
+
+}
+
+.footer {
+    margin-top: 7px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 10px 12px 0;
+    z: 1;
+}
+
+.author {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.copyright {
+    font-size: 9px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-image: url("https://media.freestocktextures.com/cache/68/ab/68ab077793d210ebc0f2f1b49772afcf.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 var(--card-border-thickness) var(--card-border-color);
+}
+
