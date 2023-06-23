@@ -68,6 +68,37 @@ function Inventory() {
                     foil={false}
                 />
 
+            <Card
+                id={1}
+                name="Ancien forest extractor"
+                type="extractor"
+                description= "Every turn, extract +1 mana."
+                quote="The forest is full of magic and its inhabitants have always known how to extract it without damaging it."
+                quoteAuthor="Aganim, sorcerer master"
+                attack={9}
+                defense={5}
+                cost={2}
+                imageUrl="https://th.bing.com/th/id/OIG.9y8JBOauE5cOE8eFQKGJ?pid=ImgGn"
+                foil={false}
+            />
+
+            <Card
+                id={1}
+                name="Ancien wooden mask"
+                type="equipment"
+                description= "Equipped creature gains +2 attack and -2 defence"
+                quote="The forest is teeming with powerful artefacts, but some are lost forever"
+                quoteAuthor="Aganim, sorcerer master"
+                attack={9}
+                defense={5}
+                cost={2}
+                imageUrl="https://th.bing.com/th/id/OIG.rUKrRW53H6Kh4cchfJ1W?pid=ImgGn"
+                foil={false}
+            />
+
+
+
+
 
             </div>
         </div>
