@@ -1,5 +1,5 @@
 :root {
-    --card-height: 65vh;
+    --card-height: 50vh;
     --card-width: calc(var(--card-height) / 1.5);
     --card-border-color: #000;
     --card-border-thickness: 14px;
@@ -12,10 +12,8 @@
 
 .card {
     position: relative;
-    width: 300px;
-    height: 418px;
-    top: 50%;
-    left: 50%;
+    width: var(--card-width);
+    height: var(--card-height);
     border-radius: var(--card-border-radius);
     box-shadow: inset 0 0 0 var(--card-border-thickness) var(--card-border-color);
     padding: var(--card-border-thickness);
@@ -32,24 +30,23 @@
     border-radius: 3% / 10%;
     margin-top: 10%;
     text-align: center;
-    font-size: 0.7em; /* Adjust the font size as desired */
+    font-size: 0.7em;
     line-height: 1;
-    z: 1;
+    z-index: 1;
     background-color: var(--bars-background);
-
 }
 
-number-circle {
-    width: 30px; /* Adjust the width as desired */
-    height: 30px; /* Adjust the height as desired */
-    background-color: #999; /* Adjust the color as desired */
+.number-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #999;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff; /* Adjust the text color as desired */
+    color: #fff;
     font-weight: bold;
-    font-size: 14px; /* Adjust the font size as desired */
+    font-size: 14px;
 }
 
 .casting-cost {
@@ -80,8 +77,10 @@ number-circle {
 
 .card-title {
     letter-spacing: 1px;
+    color: black;
+    font-family: "SF Mono Regular", monospace;
+    font-size: 0.7em;
 }
-
 
 .icon {
     width: 15px;
@@ -109,14 +108,16 @@ number-circle {
     flex-direction: column;
     justify-content: space-around;
     padding: 0;
-    margin: 10px 12px 0; /* Added margin-top of 10px */
-    height: 23%;
+    margin: 18px 12px 0;
+    height: 25%;
     box-shadow: 0 0 0 var(--inner-borders-thickness) black;
     background-color: var(--bars-background);
-    font-size: 0.7em;
+    font-size: 0.4em;
     border-radius: 3% / 10%;
     text-align: justify;
     padding: 7px;
+    color: black;
+    font-family: "SF Mono Regular", monospace;
 }
 
 .card-quote {
@@ -135,7 +136,6 @@ number-circle {
     width: 50px;
     height: 20px;
     box-shadow: 0 0 0 var(--inner-borders-thickness) black;
-
 }
 
 .footer {
@@ -146,17 +146,22 @@ number-circle {
     align-items: center;
     padding: 0;
     margin: 10px 12px 0;
-    z: 1;
+    z-index: 1;
 }
 
 .author {
     font-weight: bold;
     font-size: 10px;
+    font-family: "SF Mono Regular", monospace;
+    color: black;
 }
 
 .copyright {
     font-size: 9px;
+    font-family: "SF Mono Regular", monospace;
+    color: black;
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -170,5 +175,25 @@ number-circle {
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 var(--card-border-thickness) var(--card-border-color);
+}
+
+.card {
+    background-color: #191c29;
+}
+
+.card.spell {
+    background-color: #4c3b4d;
+}
+
+.card.dream {
+    background-color: #222E50;
+}
+
+.card.invocation {
+    background-color: #ffb347;
+}
+
+.card.ritual {
+    background-color: #B04759;
 }
 

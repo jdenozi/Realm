@@ -6,6 +6,10 @@ body {
     box-sizing: border-box;
 }
 
+.container {
+    width: 80%; /* Ensure the parent container expands to fit the grid */
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
