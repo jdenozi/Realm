@@ -1,12 +1,16 @@
 import "./Inventory.css"
+import "../../assets/css/style.css"
 
 import React  from "react";
 import Card from "../cards/Card";
 
 function Inventory() {
     return (
-        <div className="container">
-            <div className="card-grid">
+    <div className="container">
+        <h1 className="title">Realm</h1>
+        <h2 className="subtitle">End of the era</h2>
+
+        <div className="card-grid">
                 <Card
                     id={1}
                     name="Racoon healing"
@@ -55,7 +59,7 @@ function Inventory() {
                     name="Giant mutant racoon"
                     type="ritual"
                     description= "Can only be summoned by sacrificing the Raccoon desolation card. When summoned, Giant mutant raccoon inflicts 5 points of damage on a target of its choice."
-                    quote="Their close bond to anture allows them to harness Gaia's powers"
+                    quote="Their close bond to nature allows them to harness Gaia's powers"
                     quoteAuthor="Aganim, sorcerer master"
                     attack={9}
                     defense={5}

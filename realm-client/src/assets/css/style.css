@@ -1,0 +1,33 @@
+.title {
+    font-family: 'Goudy Initialen', serif;
+    font-size: 72px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.title::first-letter {
+    font-size: 130px;
+    float: left;
+    margin-right: 10px;
+    line-height: 80px;
+    color: #ffcc00;
+}
+
+.subtitle {
+    font-style: italic;
+    font-family: 'Goudy Initialen', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: -40px;
+    margin-bottom: 100px;
+
+}

@@ -40,9 +40,7 @@ function Card({id, name, type, description, quote, quoteAuthor, attack, defense,
             <div className="overlay"></div>
             <div className="bar bar-top">
                 <div className="card-title">{name}</div>
-                <div className="casting-cost">
-                    <div className="sprite sprite-1"></div>
-                </div>
+                <div className="casting-cost">{cost}</div>
             </div>
             <div className="card-image" style={{ backgroundImage: `url(${imageUrl})` }}></div>
             <div className="card-text">
