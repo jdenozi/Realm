@@ -1,0 +1,23 @@
+.connection-form {
+    background: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.2s;
+    position: relative;
+    margin-top: 10rem;
+    padding: 1rem;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.inf-desc {
+    color: hsl(0, 0%, 85%);
+    font-size: 1.25rem;
+}
+
+.connection-form:hover {
+    background: hsla(0, 0%, 100%, 10%);
+}

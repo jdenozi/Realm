@@ -1,0 +1,47 @@
+.menu {
+    background: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.2s;
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    margin-top: 5rem;
+}
+
+.button-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 30rem;
+    height: 8rem;
+    grid-gap: 0.6rem;
+
+}
+
+.m-button {
+    color: hsl(0, 0%, 80%);
+    background: hsla(345, 33%, 2%, 30%);
+    border: 1px solid hsl(0, 0%, 55%);
+    text-align: left;
+    font-size: 1.3rem;
+    transition: all 0.2s;
+    outline: 1px solid transparent;
+    outline-offset: 0px;
+}
+
+
+.m-button:hover {
+    background: hsla(0, 0%, 100%, 10%);
+    border: 1px solid hsl(0, 0%, 90%);
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    opacity: 100%;
+}
