@@ -1,0 +1,1 @@
+sudo docker run -d -p 7600:7600 realm-db
