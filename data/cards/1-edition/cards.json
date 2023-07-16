@@ -1,28 +1,29 @@
-[  {
-  "id": 1,
-  "hash": 0,
-  "name": "Deep forest extractor",
-  "type": "extractor",
-  "description": "mana +2 each start of turn and withdraw a card of your hand otherwise banish the extractor",
-  "quote": "",
-  "quoteAuthor": "",
-  "attack": 0,
-  "defense": 0,
-  "manaCost": 0,
-  "image": "img/001-deep-forest-extractor.jpeg",
-  "habitat": "",
-  "family": "",
-  "monsterCost": 0,
-  "visionCost": 0,
-  "equipmentCost": 0,
-  "tokens": [
-    [{
-      "action": "mana",
-      "target": [""],
-      "number": "+2",
-      "from": [""],
-      "temporality": "start turn"
-    },
+[
+  {
+    "id": 1,
+    "hash": 0,
+    "name": "Deep forest extractor",
+    "type": "extractor",
+    "description": "mana +2 each start of turn and withdraw a card of your hand otherwise banish the extractor",
+    "quote": "",
+    "quoteAuthor": "",
+    "attack": 0,
+    "defense": 0,
+    "manaCost": 0,
+    "image": "img/001-deep-forest-extractor.jpeg",
+    "habitat": "",
+    "family": "",
+    "monsterCost": 0,
+    "visionCost": 0,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "mana",
+        "target": [""],
+        "number": "+2",
+        "from": [""],
+        "temporality": "start turn"
+      },
       {
         "action": "withdraw",
         "target": [""],
@@ -30,17 +31,17 @@
         "from": ["hand"],
         "to": [""],
         "temporality": "start turn"
-      }],
-    [{
-      "action": "banish",
-      "target": ["itself"],
-      "number": "+2",
-      "from": [""],
-      "to": [""],
-      "temporality": "start turn"
-    }]
-  ]
-},
+      },
+      {
+        "action": "banish",
+        "target": ["itself"],
+        "number": "+2",
+        "from": [""],
+        "to": [""],
+        "temporality": "start turn"
+      }
+    ]
+  },
   {
     "id": 2,
     "hash": 0,
@@ -52,21 +53,21 @@
     "attack": 5,
     "defense": 3,
     "manaCost": 2,
-    "image": "1-edition/forest-extractor.jpeg",
+    "image": "img/forest-extractor.jpeg",
     "habitat": "",
     "family": "",
     "monsterCost": 0,
     "visionCost": 0,
     "equipmentCost": 0,
     "tokens": [
-      [{
+      {
         "action": "mana",
         "target": [""],
         "number": "+1",
         "from": [""],
         "to": [""],
         "temporality": "start turn"
-      }]
+      }
     ]
   },
   {
@@ -80,14 +81,14 @@
     "attack": "",
     "defense": "",
     "manaCost": 2,
-    "image": "data:image/png;base64,",
+    "image": "image/healing-racoon.jpeg",
     "habitat": "",
     "family": "",
     "monsterCost": 0,
     "visionCost": 0,
     "equipmentCost": 0,
     "tokens": [
-      [{
+      {
         "action": "banish",
         "target": ["cards"],
         "number": "all",
@@ -95,15 +96,14 @@
         "to": [""],
         "temporality": "now"
       },
-        {
-          "action": "draw",
-          "target": [""],
-          "number": "+1",
-          "from": ["deck"],
-          "to": ["hand"],
-          "temporality": "now"
-        }
-      ]
+      {
+        "action": "draw",
+        "target": [""],
+        "number": "+1",
+        "from": ["deck"],
+        "to": ["hand"],
+        "temporality": "now"
+      }
     ]
   },
   {
@@ -117,22 +117,23 @@
     "attack": 0,
     "defense": 3,
     "manaCost": 3,
-    "image": "1-edition/racoon-desolation.jpeg",
+    "image": "img/racoon-desolation.jpeg",
     "habitat": "forest",
     "family": "animal",
     "monsterCost": 0,
     "visionCost": 0,
     "equipmentCost": 0,
     "tokens": [
-      [{
+      {
         "action": "mana",
         "target": [""],
         "number": "+1",
         "from": [""],
         "to": [""],
         "temporality": "start turn"
-      }]
-    ]  },
+      }
+    ]
+  },
   {
     "id": 5,
     "hash": 0,
@@ -144,14 +145,14 @@
     "attack": 0,
     "defense": 0,
     "manaCost": 2,
-    "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAA...",
+    "image": "img/racoon-smite.jpeg",
     "habitat": "",
     "family": "",
     "monsterCost": 0,
     "visionCost": 0,
     "equipmentCost": 0,
     "tokens": [
-      [{
+      {
         "action": "destroy",
         "target": ["card"],
         "number": "+1",
@@ -159,15 +160,14 @@
         "to": [""],
         "temporality": "now"
       },
-        {
+      {
         "action": "withdraw",
         "target": ["card"],
         "number": "+1",
         "from": ["hand"],
         "to": ["cemetery"],
         "temporality": "now"
-        }
-      ]
+      }
     ]
   },
   {
@@ -181,7 +181,7 @@
     "attack": 5,
     "defense": 3,
     "manaCost": 3,
-    "image": "1-edition/racoon-rage.jpeg",
+    "image": "img/racoon-rage.jpeg",
     "habitat": "forest",
     "family": "animal",
     "monsterCost": 0,
@@ -200,7 +200,7 @@
     "attack": 9,
     "defense": 5,
     "manaCost": 2,
-    "image": "1-edition/giant-mutant-racoon.jpeg",
+    "image": "img/giant-mutant-racoon.jpeg",
     "habitat": "forest",
     "family": "animal",
     "monsterCost": 1,
@@ -219,14 +219,14 @@
     "attack": 9,
     "defense": 5,
     "manaCost": 2,
-    "image": "1-edition/giant-mutant-racoon.jpeg",
+    "image": "1img/wooden-mask.jpeg",
     "habitat": "forest",
     "family": "animal",
     "monsterCost": 1,
     "visionCost": 1,
     "equipmentCost": 0,
     "tokens": [
-      [{
+      {
         "action": "equip",
         "target": ["invocation", "ritual"],
         "number": "+1",
@@ -234,15 +234,14 @@
         "to": [""],
         "temporality": "now"
       },
-        {
-          "action": "up",
-          "target": ["attack"],
-          "number": "+1",
-          "from": [""],
-          "to": [""],
-          "temporality": "now"
-        }
-      ]
+      {
+        "action": "up",
+        "target": ["attack"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
     ]
   }
 ]
