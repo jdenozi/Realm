@@ -1,0 +1,248 @@
+[  {
+  "id": 1,
+  "hash": 0,
+  "name": "Deep forest extractor",
+  "type": "extractor",
+  "description": "mana +2 each start of turn and withdraw a card of your hand otherwise banish the extractor",
+  "quote": "",
+  "quoteAuthor": "",
+  "attack": 0,
+  "defense": 0,
+  "manaCost": 0,
+  "image": "img/001-deep-forest-extractor.jpeg",
+  "habitat": "",
+  "family": "",
+  "monsterCost": 0,
+  "visionCost": 0,
+  "equipmentCost": 0,
+  "tokens": [
+    [{
+      "action": "mana",
+      "target": [""],
+      "number": "+2",
+      "from": [""],
+      "temporality": "start turn"
+    },
+      {
+        "action": "withdraw",
+        "target": [""],
+        "number": "",
+        "from": ["hand"],
+        "to": [""],
+        "temporality": "start turn"
+      }],
+    [{
+      "action": "banish",
+      "target": ["itself"],
+      "number": "+2",
+      "from": [""],
+      "to": [""],
+      "temporality": "start turn"
+    }]
+  ]
+},
+  {
+    "id": 2,
+    "hash": 0,
+    "name": "Forest extractor",
+    "type": "extractor",
+    "description": "Remove all cards from the cemetery. At the end of the turn, return those cards and take two of them in your hand. Then draw a card.",
+    "quote": "The raccoons in the Ashram forest are so connected to nature that they are said to be capable of miracles",
+    "quoteAuthor": "Edwin II, monarch prodigy",
+    "attack": 5,
+    "defense": 3,
+    "manaCost": 2,
+    "image": "1-edition/forest-extractor.jpeg",
+    "habitat": "",
+    "family": "",
+    "monsterCost": 0,
+    "visionCost": 0,
+    "equipmentCost": 0,
+    "tokens": [
+      [{
+        "action": "mana",
+        "target": [""],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "start turn"
+      }]
+    ]
+  },
+  {
+    "id": 3,
+    "hash": 0,
+    "name": "Healing racoon",
+    "type": "spell",
+    "description": "Banish all cards from the cemetery. Then draw a card.",
+    "quote": "The raccoons in the Ashram forest are so connected to nature that they are said to be capable of miracles",
+    "quoteAuthor": "Edwin II, monarch prodigy",
+    "attack": "",
+    "defense": "",
+    "manaCost": 2,
+    "image": "data:image/png;base64,",
+    "habitat": "",
+    "family": "",
+    "monsterCost": 0,
+    "visionCost": 0,
+    "equipmentCost": 0,
+    "tokens": [
+      [{
+        "action": "banish",
+        "target": ["cards"],
+        "number": "all",
+        "from": ["cemetery"],
+        "to": [""],
+        "temporality": "now"
+      },
+        {
+          "action": "draw",
+          "target": [""],
+          "number": "+1",
+          "from": ["deck"],
+          "to": ["hand"],
+          "temporality": "now"
+        }
+      ]
+    ]
+  },
+  {
+    "id": 4,
+    "hash": 0,
+    "name": "Racoon desolation",
+    "type": "invocation",
+    "description": "Every turn, Racoon desolation gives you an extra mana point",
+    "quote": "The tears of the raccoon people are full of mystery",
+    "quoteAuthor": "Encyclopedia Vol III",
+    "attack": 0,
+    "defense": 3,
+    "manaCost": 3,
+    "image": "1-edition/racoon-desolation.jpeg",
+    "habitat": "forest",
+    "family": "animal",
+    "monsterCost": 0,
+    "visionCost": 0,
+    "equipmentCost": 0,
+    "tokens": [
+      [{
+        "action": "mana",
+        "target": [""],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "start turn"
+      }]
+    ]  },
+  {
+    "id": 5,
+    "hash": 0,
+    "name": "Racoon smite",
+    "type": "spell",
+    "description": "Destroy a card on the field and withdraw a card",
+    "quote": "It is very rare to see these peaceful tribe take up arms. No one has ever described them, and perhaps not for nothing.",
+    "quoteAuthor": "Aganim, sorcerer master",
+    "attack": 0,
+    "defense": 0,
+    "manaCost": 2,
+    "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAA...",
+    "habitat": "",
+    "family": "",
+    "monsterCost": 0,
+    "visionCost": 0,
+    "equipmentCost": 0,
+    "tokens": [
+      [{
+        "action": "destroy",
+        "target": ["card"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+        {
+        "action": "withdraw",
+        "target": ["card"],
+        "number": "+1",
+        "from": ["hand"],
+        "to": ["cemetery"],
+        "temporality": "now"
+        }
+      ]
+    ]
+  },
+  {
+    "id": 6,
+    "hash": 0,
+    "name": "Forest racoon rage",
+    "type": "invocation",
+    "description": "",
+    "quote": "It is very rare to see these peaceful tribe take up arms. No one has ever described them, and perhaps not for nothing.",
+    "quoteAuthor": "Aganim, sorcerer master",
+    "attack": 5,
+    "defense": 3,
+    "manaCost": 3,
+    "image": "1-edition/racoon-rage.jpeg",
+    "habitat": "forest",
+    "family": "animal",
+    "monsterCost": 0,
+    "visionCost": 0,
+    "equipmentCost": 0,
+    "tokens": []
+  },
+  {
+    "id": 7,
+    "hash": 0,
+    "name": "Giant mutant racoon",
+    "type": "ritual",
+    "description": "Can only be summoned by sacrificing the Raccoon desolation card. When summoned, Giant mutant raccoon inflicts 5 points of damage on a target of its choice.",
+    "quote": "Their close bond to nature allows them to harness Gaia's powers",
+    "quoteAuthor": "Aganim, sorcerer master",
+    "attack": 9,
+    "defense": 5,
+    "manaCost": 2,
+    "image": "1-edition/giant-mutant-racoon.jpeg",
+    "habitat": "forest",
+    "family": "animal",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": []
+  },
+  {
+    "id": 8,
+    "hash": 0,
+    "name": "Wooden mask",
+    "type": "equipment",
+    "description": ".",
+    "quote": "Their close bond to nature allows them to harness Gaia's powers",
+    "quoteAuthor": "Aganim, sorcerer master",
+    "attack": 9,
+    "defense": 5,
+    "manaCost": 2,
+    "image": "1-edition/giant-mutant-racoon.jpeg",
+    "habitat": "forest",
+    "family": "animal",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      [{
+        "action": "equip",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+        {
+          "action": "up",
+          "target": ["attack"],
+          "number": "+1",
+          "from": [""],
+          "to": [""],
+          "temporality": "now"
+        }
+      ]
+    ]
+  }
+]

@@ -1,1 +1,4 @@
-sudo docker build -t realm-db .
+#!/bin/bash
+# Build the Docker image
+docker build --no-cache -t realm-db .
+
