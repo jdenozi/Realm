@@ -1,12 +1,17 @@
-const Card = require("../model/Card");
+const GenericModel = require("../model/Card");
 
-const router = async function (request, response){
-    if (request.url === "api/cards/inventory" && request.method === "GET"){
-        const cards = await Card.find();
+const cardRouter = async function (request, response){
+    if (request.url === "/cards" && request.method === "GET"){
+        const cards = await GenericModel.find();
         // set the status code, and content-type
-        response.writeHead(200, { "Content-Type": "application/json" });
+        response.writeHead(200, { "Content-Type": "application/cards" });
         // send the data
         response.end(JSON.stringify(cards));
     }
+    else{
+        response.writeHead(200, { "Content-Type": "application/cards" });
+        response.end("Error");
+    }
 }
-module.exports = router;
+1 2 5 6 7
+module.exports = cardRouter;
