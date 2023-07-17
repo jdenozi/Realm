@@ -15,7 +15,7 @@ import React, { useState, useEffect } from "react";
  * @param {String} imageUrl The url of the image to display
  * @param {Boolean} foil The date
  */
-function Card({id, name, type, description, quote, quoteAuthor, attack, defense, cost, imageUrl, foil}) {
+function Card({id, name, type, description, quote, quoteAuthor, attack, defense, manaCost, imageUrl, foil}) {
 
 
     const additionalContent = (type) => {
@@ -40,7 +40,7 @@ function Card({id, name, type, description, quote, quoteAuthor, attack, defense,
             <div className="overlay"></div>
             <div className="bar bar-top">
                 <div className="card-title">{name}</div>
-                <div className="casting-cost">{cost}</div>
+                <div className="casting-cost">{manaCost}</div>
             </div>
             <div className="card-image" style={{ backgroundImage: `url(${imageUrl})` }}></div>
             <div className="card-text">

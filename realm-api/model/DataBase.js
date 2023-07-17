@@ -5,7 +5,6 @@ class Database {
     constructor(databaseURI, databaseName) {
         this.databaseURI = databaseURI;
         this.databaseName = databaseName;
-        console.log("Database information", databaseURI, databaseName)
     }
 
     connect() {

@@ -65,7 +65,7 @@
     letter-spacing: 1px;
     color: black;
     font-family: "SF Mono Regular", monospace;
-    font-size: 0.7em;
+    font-size: 1.1em;
 }
 
 .icon {
@@ -98,7 +98,7 @@
     height: 25%;
     box-shadow: 0 0 0 var(--inner-borders-thickness) black;
     background-color: var(--bars-background);
-    font-size: 0.4em;
+    font-size: 0.7em;
     border-radius: 3% / 10%;
     text-align: justify;
     padding: 7px;
@@ -176,7 +176,7 @@
     background-color: #4c3b4d;
 }
 
-.card.dream {
+.card.vision {
     background-color: #222E50;
 }
 

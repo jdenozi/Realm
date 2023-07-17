@@ -1,18 +1,12 @@
-body {
-    min-height: 100vh;
-    background: #212534;
-    padding-top: 2rem;
-    padding-bottom: 20rem;
-    box-sizing: border-box;
-}
-
 .container {
-    width: 80%; /* Ensure the parent container expands to fit the grid */
+    width: 100%; /* Ensure the parent container expands to fit the grid */
+
+
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
     justify-items: center;
 }

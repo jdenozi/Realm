@@ -1,95 +1,104 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './Home.css';
 import Connection from './connection/Connection';
 import Menu from './menu/Menu';
+import Inventory from "../inventory/Inventory";
 import '../../assets/css/style.css';
 
 const Home = () => {
     const [currentComponent, setCurrentComponent] = useState('Connection');
-
+    const canvasRef = useRef(null);
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             setCurrentComponent('Menu');
         }
     };
 
+    const handleMenuButtonClick = () => {
+        setCurrentComponent('Inventory');
+    };
+
     useEffect(() => {
-        if (currentComponent === 'Menu') {
-            const canvas = document.getElementById("ashes");
-            const ctx = canvas.getContext("2d");
-            const W = window.innerWidth;
-            const H = window.innerHeight;
+        if(currentComponent === "Menu"){
+            const canvas = canvasRef.current;
+            const context = canvas.getContext("2d");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            const W = canvas.width;
+            const H = canvas.height;
+            const rectangles = [];
 
-            var layers = [];
-
-            layers.push({
-                size: 1,
-                speed: (1/4),
-                count: 30,
-                particules: []
-            });
-
-            function draw()
-            {
-                ctx.clearRect(0, 0, W, H);
-
-                ctx.fillStyle = "rgba(255, 255, 255, 1)";
-                ctx.beginPath();
-                for(var l of layers)
-                {
-                    for(var p of l.particules)
-                    {
-                        ctx.moveTo(p.x, p.y);
-                        var hs = l.size / 2;
-                        ctx.fillRect(p.x - hs, p.y - hs, hs*2, hs*2);
-                    }
-                }
-                ctx.fill();
-                update();
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
             }
 
-            function update()
-            {
-                for(var l of layers) {
-                    for(var p of l.particules) {
-                        if(p.y < 0) {
-                            p.y = H + 10;
-                        }
-                        p.y -= l.speed;
-                    }
-                    if(l.particules.length < l.count) {
-                        for(var i = 0; i < l.count; i++) {
-                            var particule = {
-                                x: Math.random() * W,
-                                y: Math.random() * H
-                            };
-                            l.particules.push(particule);
-                        }
+            const getRandomColor = () => {
+                const red = Math.floor(Math.random() * 220);
+                const green = Math.floor(Math.random() * 50);
+                const blue = 0; // Set blue to 0 for the gradient effect
+                return `rgb(${red}, ${green}, ${blue})`;
+            };
+
+            function createRectangle() {
+                const x = W;
+                const y = Math.random() * H;
+                const width = getRandomInt(10, 40);
+                const height = getRandomInt(10, 30);
+                const speed = Math.random() * 2 + 1;
+                const color = getRandomColor();
+                const dx = -1;
+                const dy = Math.random() * 2 - 1; // Random vertical movement
+                const radius = getRandomInt(1, Math.min(width, height) / 7); // Random radius within limits
+                rectangles.push({ x, y, width, height, speed, color, dx, dy, radius});
+            }
+
+            function draw() {
+                context.clearRect(0, 0, W, H);
+
+                for (let i = rectangles.length - 1; i >= 0; i--) {
+                    const rect = rectangles[i];
+
+                    context.fillStyle = rect.color;
+                    context.beginPath();
+                    context.arc(rect.x, rect.y, rect.radius, 0, Math.PI * 2);
+                    context.closePath();
+                    context.fill();
+
+                    rect.x += rect.dx * rect.speed;
+                    rect.y += rect.dy * rect.speed;
+
+                    if (rect.x + rect.radius < 0 || rect.y - rect.radius > H) {
+                        rectangles.splice(i, 1);
                     }
                 }
-            }
-            setInterval(draw, 25);
 
+                if (Math.random() < 0.7) {
+                    createRectangle();
+                }
+
+                requestAnimationFrame(draw);
+            }
+
+            requestAnimationFrame(draw);
         }
+
     }, [currentComponent]);
 
-
     return (
-            <section id="home" className="home" onKeyDown={handleKeyPress} tabIndex={0}>
+
+        <div style={{ position: 'relative' }}>
+            <canvas id="ashesCanvas" ref={canvasRef}></canvas>
+            <section id="home" className="home" onKeyDown={handleKeyPress} tabIndex={0} style={{ position: 'absolute', top: 0, left: 0 }}>
                 <h1 className="title">Realm</h1>
                 <h2 className="subtitle">End of the era</h2>
-
                 {currentComponent === 'Connection' && <Connection />}
-                {currentComponent === 'Menu' && <Menu />}
-
-                <canvas id="ashes"></canvas>
-
+                {currentComponent === 'Menu' && <Menu handleButtonClick={handleMenuButtonClick} />}
+                {currentComponent === 'Inventory' && <Inventory />}
             </section>
+        </div>
 
     );
-
 };
-
 
 export default Home;
 

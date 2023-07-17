@@ -1,109 +1,54 @@
-import "./Inventory.css"
-import "../../assets/css/style.css"
-
-import React  from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../cards/Card";
+import "./Inventory.css";
+import "../../assets/css/style.css";
 
 function Inventory() {
+    const [cards, setCards] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:8080/cards", {
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                setCards(data);
+                for (const card of data) {
+                    console.log("Card name", card.name);
+                    card.imageUrl = `http://localhost:8080/cardsArtwork/${card.id}`;
+                }
+                setCards([...data]);
+            })
+            .catch((error) => {
+                console.error("Error fetching card data:", error);
+            });
+    }, []);
+
     return (
-    <div className="container">
-        <h1 className="title">Realm</h1>
-        <h2 className="subtitle">End of the era</h2>
-
-        <div className="card-grid">
-                <Card
-                    id={1}
-                    name="Racoon healing"
-                    type="spell"
-                    description="Remove all card from the cemetery. At the end of the turn, return those card and take two of them in your hand. Then draw a card."
-                    quote="The raccoons in the Ashram forest are so connected to nature that they are said to be capable of miracles"
-                    quoteAuthor="Edwin II, monarch prodigy"
-                    attack={5}
-                    defense={3}
-                    cost={2}
-                    imageUrl="https://th.bing.com/th/id/OIG.gz5HH809pr3g.D6VEsAN?pid=ImgGn"
-                    foil={false}
-                />
-
-                <Card
-                    id={2}
-                    name="Racoon desolation"
-                    type="dream"
-                    description="Every turn, Racoon desolation gives you an extra mana point, regardless of your mana level."
-                    quote="The tears of the raccoon people are full of mystery"
-                    quoteAuthor="Encyclopedia Vol III"
-                    attack={5}
-                    defense={3}
-                    cost={2}
-                    imageUrl="https://th.bing.com/th/id/OIG.RwKZPcKEQ4CGLSCFbrDe?pid=ImgGn"
-                    foil={false}
-                />
-
-                <Card
-                    id={3}
-                    name="Forest racoon rage"
-                    type="invocation"
-                    description=""
-                    quote="It is very rare to see these peaceful tribe take up arms. No one has ever described them, and perhaps not for nothing."
-                    quoteAuthor="Aganim, sorcerer master"
-                    attack={5}
-                    defense={3}
-                    cost={2}
-                    imageUrl="https://th.bing.com/th/id/OIG.DMWpOjW1.sZxsOJSXshH?w=270&h=270&c=6&r=0&o=5&pid=ImgGn"
-                    foil={false}
-                />
-
-
-                <Card
-                    id={1}
-                    name="Giant mutant racoon"
-                    type="ritual"
-                    description= "Can only be summoned by sacrificing the Raccoon desolation card. When summoned, Giant mutant raccoon inflicts 5 points of damage on a target of its choice."
-                    quote="Their close bond to nature allows them to harness Gaia's powers"
-                    quoteAuthor="Aganim, sorcerer master"
-                    attack={9}
-                    defense={5}
-                    cost={2}
-                    imageUrl="https://th.bing.com/th/id/OIG.AMnW8Y1wq5mcKFgoh26W?pid=ImgGn"
-                    foil={false}
-                />
-
-            <Card
-                id={1}
-                name="Ancien forest extractor"
-                type="extractor"
-                description= "Every turn, extract +1 mana."
-                quote="The forest is full of magic and its inhabitants have always known how to extract it without damaging it."
-                quoteAuthor="Aganim, sorcerer master"
-                attack={9}
-                defense={5}
-                cost={2}
-                imageUrl="https://th.bing.com/th/id/OIG.9y8JBOauE5cOE8eFQKGJ?pid=ImgGn"
-                foil={false}
-            />
-
-            <Card
-                id={1}
-                name="Ancien wooden mask"
-                type="equipment"
-                description= "Equipped creature gains +2 attack and -2 defence"
-                quote="The forest is teeming with powerful artefacts, but some are lost forever"
-                quoteAuthor="Aganim, sorcerer master"
-                attack={9}
-                defense={5}
-                cost={2}
-                imageUrl="https://th.bing.com/th/id/OIG.rUKrRW53H6Kh4cchfJ1W?pid=ImgGn"
-                foil={false}
-            />
-
-
-
-
-
+        <div className="container">
+            <div className="card-grid">
+                {cards.map((card) => (
+                    <Card
+                        key={card.id}
+                        id={card.id}
+                        name={card.name}
+                        type={card.type}
+                        description={card.description}
+                        quote={card.quote}
+                        quoteAuthor={card.quoteAuthor}
+                        attack={card.attack}
+                        defense={card.defense}
+                        manaCost={card.manaCost}
+                        foil={card.foil}
+                        imageUrl={card.imageUrl} // Pass the imageUrl as a prop to Card component
+                    />
+                ))}
             </div>
         </div>
     );
-
 }
 
 export default Inventory;

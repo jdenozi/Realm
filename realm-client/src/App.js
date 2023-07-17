@@ -1,14 +1,16 @@
+import React from 'react';
 import './App.css';
-import Inventory from "./components/inventory/Inventory";
+import Home from './components/home/Home';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Inventory/>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <body>
+                <Home/>
+            </body>
+        </div>
+
+);
 }
 
 export default App;
