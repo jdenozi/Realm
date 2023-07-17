@@ -53,7 +53,7 @@
     "attack": 5,
     "defense": 3,
     "manaCost": 2,
-    "image": "img/forest-extractor.jpeg",
+    "image": "img/002-forest-extractor.jpeg",
     "habitat": "",
     "family": "",
     "monsterCost": 0,
@@ -81,7 +81,7 @@
     "attack": "",
     "defense": "",
     "manaCost": 2,
-    "image": "image/healing-racoon.jpeg",
+    "image": "img/003-healing-racoon.jpeg",
     "habitat": "",
     "family": "",
     "monsterCost": 0,
@@ -117,7 +117,7 @@
     "attack": 0,
     "defense": 3,
     "manaCost": 3,
-    "image": "img/racoon-desolation.jpeg",
+    "image": "img/004-racoon-desolation.jpeg",
     "habitat": "forest",
     "family": "animal",
     "monsterCost": 0,
@@ -145,7 +145,7 @@
     "attack": 0,
     "defense": 0,
     "manaCost": 2,
-    "image": "img/racoon-smite.jpeg",
+    "image": "img/005-racoon-smite.jpeg",
     "habitat": "",
     "family": "",
     "monsterCost": 0,
@@ -181,7 +181,7 @@
     "attack": 5,
     "defense": 3,
     "manaCost": 3,
-    "image": "img/racoon-rage.jpeg",
+    "image": "img/006-racoon-rage.jpeg",
     "habitat": "forest",
     "family": "animal",
     "monsterCost": 0,
@@ -200,7 +200,7 @@
     "attack": 9,
     "defense": 5,
     "manaCost": 2,
-    "image": "img/giant-mutant-racoon.jpeg",
+    "image": "img/007-giant-mutant-racoon.jpeg",
     "habitat": "forest",
     "family": "animal",
     "monsterCost": 1,
@@ -213,13 +213,13 @@
     "hash": 0,
     "name": "Wooden mask",
     "type": "equipment",
-    "description": ".",
-    "quote": "Their close bond to nature allows them to harness Gaia's powers",
-    "quoteAuthor": "Aganim, sorcerer master",
+    "description": "+5 defence to target.",
+    "quote": "A relic forgotten even by the gods",
+    "quoteAuthor": "Lavinia Shadowdusk, Shadow Magic Seer",
     "attack": 9,
     "defense": 5,
     "manaCost": 2,
-    "image": "1img/wooden-mask.jpeg",
+    "image": "img/008-wooden-mask.jpeg",
     "habitat": "forest",
     "family": "animal",
     "monsterCost": 1,
@@ -243,5 +243,796 @@
         "temporality": "now"
       }
     ]
-  }
+  },
+  {
+    "id": 9,
+    "hash": 0,
+    "name": "Deadly gluttony",
+    "type": "spell",
+    "description": "The opponent cannot declare an attack.",
+    "quote": "The dragon, having lost his superbness, becomes contagious and prevents the other creatures from moving.",
+    "quoteAuthor": "AMagnus Ironheart, Mechanical Engineering Inventor",
+    "attack": 0,
+    "defense": 0,
+    "manaCost": 2,
+    "image": "img/009-deadly-gluttony.jpeg",
+    "habitat": "",
+    "family": "",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "equip",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+      {
+        "action": "up",
+        "target": ["attack"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "hash": 0,
+    "name": "Legend of yesteryear: albino dragon",
+    "type": "invocation",
+    "description": ".",
+    "quote": "Dragons have been pathetic for centuries now. It's a shame",
+    "quoteAuthor": "Arabella Emberwind, Fire Spells Alchemist",
+    "attack": 2,
+    "defense": 2,
+    "manaCost": 2,
+    "image": "img/010-legend-of-yesteryear-albino-dragon.jpeg",
+    "habitat": "mountain",
+    "family": "animal",
+    "monsterCost": 3,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "equip",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+      {
+        "action": "up",
+        "target": ["attack"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "hash": 0,
+    "name": "Echo from the past",
+    "type": "equipment",
+    "description": "Makes a dragon invulnerable to spells and attacks.",
+    "quote": "The pride of some great dragons means they are able to deploy a treasure trove of magic to protect their descendants.",
+    "quoteAuthor": "Aganim, sorcerer master",
+    "attack": 9,
+    "defense": 5,
+    "manaCost": 4,
+    "image": "img/011-echo-from-the-past.jpeg",
+    "habitat": "",
+    "family": "",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "equip",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+      {
+        "action": "up",
+        "target": ["attack"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "hash": 0,
+    "name": "Avicellus metallicum",
+    "type": "invocation",
+    "description": ".",
+    "quote": "Thanks to humans, birds have been able to evolve and protect themselves from the influence of those who came before them.",
+    "quoteAuthor": "Percival Ravenshade, Cryptic Runes Interpreter",
+    "attack": 3,
+    "defense": 5,
+    "manaCost": 2,
+    "image": "img/012-avicellus-metallicum.jpeg",
+    "habitat": "sky",
+    "family": "animal",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "equip",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+      {
+        "action": "up",
+        "target": ["attack"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "hash": 0,
+    "name": "Revival",
+    "type": "spell",
+    "description": "Revive an Invocation or Ritual card from your graveyard to the field. If you do, select and discard one card from your hand as compensation.",
+    "quote": "Revival gives you the opportunity to regain control over key cards that can turn the tide of the game. Use it strategically to recover crucial resources and maintain your advantage on the battlefield.",
+    "quoteAuthor": "Aganim, sorcerer master",
+    "attack": 9,
+    "defense": 5,
+    "manaCost": 2,
+    "image": "img/013-revival.jpeg",
+    "habitat": "forest",
+    "family": "animal",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "invoke",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": ["graveyard"],
+        "to": ["battle"],
+        "temporality": "now"
+      },
+      {
+        "action": "withdraw",
+        "target": ["any"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "hash": 0,
+    "name": "Rohk, metal bird god",
+    "type": "invocation",
+    "description": ".",
+    "quote": "The fusion of metal and myth",
+    "quoteAuthor": "Percival Ravenshade, Cryptic Runes Interpreter",
+    "attack": 9,
+    "defense": 5,
+    "manaCost": 2,
+    "image": "img/014-rohk-metal-bird-god.jpeg",
+    "habitat": "forest",
+    "family": "animal",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "equip",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+      {
+        "action": "up",
+        "target": ["attack"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
+    ]
+  },  {
+  "id": 15,
+  "hash": 0,
+  "name": "Hide your face",
+  "type": "equipment",
+  "description": "The target cannot be destroyed in combat.",
+  "quote": "Children's play with demons has always disturbed people",
+  "quoteAuthor": "Aganim, sorcerer master",
+  "attack": 0,
+  "defense": 0,
+  "manaCost": 5,
+  "image": "img/015-hide-your-face.jpeg",
+  "habitat": "forest",
+  "family": "animal",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 16,
+  "hash": 0,
+  "name": "Metal winged beast",
+  "type": "invocation",
+  "description": "",
+  "quote": "Evolution has turned him into an insensitive, indestructible bird. The power of the gods has no effect on him. ",
+  "quoteAuthor": "Maximilian Blackthorn, Mythical Creatures Expert",
+  "attack": 9,
+  "defense": 5,
+  "manaCost": 1,
+  "image": "img/016-metal-winged-beast.jpeg",
+  "habitat": "sky",
+  "family": "animal",
+  "monsterCost": 0,
+  "visionCost": 0,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 17,
+  "hash": 0,
+  "name": "Burn in hell",
+  "type": "vision",
+  "description": "Inflicts -2 damage to all your opponent's monsters for 2 life points",
+  "quote": "I like fire",
+  "quoteAuthor": "Arabella Emberwind, Fire Spells Alchemist",
+  "attack": 9,
+  "defense": 5,
+  "manaCost": 1,
+  "image": "img/017-burn-in-hell.jpeg",
+  "habitat": "",
+  "family": "",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 18,
+  "hash": 0,
+  "name": "Evolution of Saint Michael, the archangel of metal ",
+  "type": "ritual",
+  "description": "Inflicts 2 points of damage to all demon monsters when summoned. All angel or sky type summons and/or rituals gain +1 attack.",
+  "quote": "It is said that his aura alone can frighten away demons",
+  "quoteAuthor": "Casimir Starfrost, Celestial Navigation Expert",
+  "attack": 6,
+  "defense": 3,
+  "manaCost": 2,
+  "image": "img/018-evolution-of-saint-michael.jpeg",
+  "habitat": "sky",
+  "family": "angel",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 19,
+  "hash": 0,
+  "name": "Eclipse",
+  "type": "spell",
+  "description": "Prevents the opposing player from drawing on any future game turn",
+  "quote": "",
+  "quoteAuthor": "",
+  "attack": 9,
+  "defense": 5,
+  "manaCost": 2,
+  "image": "img/019-eclipse.jpeg",
+  "habitat": "",
+  "family": "",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 20,
+  "hash": 0,
+  "name": "They've been there ",
+  "type": "vision",
+  "description": "An evil aura increases demons' defence by +2.",
+  "quote": "When it passes, everything dies and only after several centuries does nature reclaim its rights.",
+  "quoteAuthor": "Percival Ravenshade, Historician",
+  "attack": 9,
+  "defense": 5,
+  "manaCost": 2,
+  "image": "img/020-they-been-there.jpeg",
+  "habitat": "forest",
+  "family": "animal",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 21,
+  "hash": 0,
+  "name": "The luminous titan mushroom, guardian of the city",
+  "type": "ritual",
+  "description": "If you control another invocation or ritual, you gain one life point.",
+  "quote": "Their close bond to nature allows them to harness Gaia's powers",
+  "quoteAuthor": "Maximilian Blackthorn, Mythical Creatures Expert",
+  "attack": 2,
+  "defense": 20,
+  "manaCost": 5,
+  "image": "img/021-the-luminous-titan.jpeg",
+  "habitat": "forest",
+  "family": "animal",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 22,
+  "hash": 0,
+  "name": "Spread my descendants",
+  "type": "spell",
+  "description": "Invokes 3 mushroom tokens.",
+  "quote": "Mushrooms have always had the ability to rapidly conquer a territory",
+  "quoteAuthor": "Valeria Nightbloom, Herbal Remedies Alchemist",
+  "attack": 0,
+  "defense": 0,
+  "manaCost": 2,
+  "image": "img/022-spread-my-descendant.jpeg",
+  "habitat": "",
+  "family": "",
+  "monsterCost": 0,
+  "visionCost": 0,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 23,
+  "hash": 0,
+  "name": "Influence of the gods",
+  "type": "vision",
+  "description": "Each card drawn by your opponent should be revealed .",
+  "quote": "The ancient gods are everywhere",
+  "quoteAuthor": "Aganim, sorcerer master",
+  "attack": 9,
+  "defense": 5,
+  "manaCost": 2,
+  "image": "img/023-influence-of-the-gods.jpeg",
+  "habitat": "forest",
+  "family": "animal",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 24,
+  "hash": 0,
+  "name": "The dragon without shards",
+  "type": "invocation",
+  "description": "",
+  "quote": "In the past, dragons were magnificent, powerful and impressive creatures.",
+  "quoteAuthor": "Aganim, sorcerer master",
+  "attack": 9,
+  "defense": 5,
+  "manaCost": 2,
+  "image": "img/024-the-dragon-without-shards.jpeg",
+  "habitat": "forest",
+  "family": "animal",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 25,
+  "hash": 0,
+  "name": "Dahu dahu",
+  "type": "invocation",
+  "description": ".",
+  "quote": "Few people have been able to see it ",
+  "quoteAuthor": "Zu Li An, nature's surveyor",
+  "attack": 2,
+  "defense": 2,
+  "manaCost": 2,
+  "image": "img/025-dahu-dahu.jpeg",
+  "habitat": "montain",
+  "family": "animal",
+  "monsterCost": 0,
+  "visionCost": 0,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 26,
+  "hash": 0,
+  "name": "Mushroom abomination",
+  "type": "invocation",
+  "description": "",
+  "quote": "An abomination born of one man's lust for the power of mushrooms.",
+  "quoteAuthor": "Seraphim Stoneheart, Stone and Earth historician",
+  "attack": 1,
+  "defense": 1,
+  "manaCost": 1,
+  "image": "img/026-mushroom-abomination.jpeg",
+  "habitat": "forest",
+  "family": "mushroom",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 27,
+  "hash": 0,
+  "name": "The myth, here it is, the Gevaudan ",
+  "type": "invocation",
+  "description": "",
+  "quote": "A ferocious beast known to some Realm residents",
+  "quoteAuthor": "Zu Li An, nature surveyor's",
+  "attack": 2,
+  "defense": 1,
+  "manaCost": 1,
+  "image": "img/027-the-myth-here-it-is-the-gevaudan.jpeg",
+  "habitat": "mountain",
+  "family": "animal",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 28,
+  "hash": 0,
+  "name": "Impossible beast, the association of myths",
+  "type": "ritual",
+  "description": "Can only be invoked by sacrificing Dahu dahu and Le Gevaudan.",
+  "quote": "The impossible happened and the mountain became one of the darkest places on earth.",
+  "quoteAuthor": "Zu Li An, nature surveyor's",
+  "attack": 9,
+  "defense": 5,
+  "manaCost": 0,
+  "image": "img/028-impossible-beast-the-association-of-myths.jpeg",
+  "habitat": "mountain",
+  "family": "animal",
+  "monsterCost": 2,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 29,
+  "hash": 0,
+  "name": "Metalisation of nature by priests",
+  "type": "vision",
+  "description": "All invocations of the animal type gain +2 in defence.",
+  "quote": "Despite his weaknesses, man sometimes manages to protect nature. But what is the price? ",
+  "quoteAuthor": "Aganim, sorcerer master",
+  "attack": 0,
+  "defense": 0,
+  "manaCost": 2,
+  "image": "img/029-metalisation-of-nature-by-priest.jpeg",
+  "habitat": "forest",
+  "family": "animal",
+  "monsterCost": 0,
+  "visionCost": 0,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
+,  {
+  "id": 30,
+  "hash": 0,
+  "name": "Larval Drgon",
+  "type": "invocation",
+  "description": ".",
+  "quote": "Their close bond to nature allows them to harness Gaia's powers",
+  "quoteAuthor": "Aganim, sorcerer master",
+  "attack": 1,
+  "defense": 1,
+  "manaCost": 1,
+  "image": "img/030-larval-drgon.jpeg",
+  "habitat": "mountain",
+  "family": "animal",
+  "monsterCost": 1,
+  "visionCost": 1,
+  "equipmentCost": 0,
+  "tokens": [
+    {
+      "action": "equip",
+      "target": ["invocation", "ritual"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    },
+    {
+      "action": "up",
+      "target": ["attack"],
+      "number": "+1",
+      "from": [""],
+      "to": [""],
+      "temporality": "now"
+    }
+  ]
+}
 ]

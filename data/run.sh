@@ -30,4 +30,4 @@ docker run -d -p 7600:27017 \
     mongo
 
 echo "Import card database"
-docker exec realm-db mongoimport -d realm -c cards --file data/cards/1-edition/cards.json --jsonArray
+docker exec realm-db mongoimport -d realm -c cards --file data/cards/cards.json --jsonArray
