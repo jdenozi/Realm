@@ -46,6 +46,56 @@ npm start
 
 The development server should now be running at http://localhost:3000.
 
+## Project Setup and Deployment Guide
+
+This README documentation provides instructions on how to set up and deploy the application, which includes a MongoDB database and an API service. Additionally, it suggests using a `run.sh` script to launch the entire system.
+
+### Prerequisites
+
+Before proceeding with the setup, make sure you have the following installed:
+
+- Docker: Ensure that Docker is installed and running on your system.
+- `.env` File: Create an `.env` file in the project root directory with the necessary environment variables. Example variables may include:
+    - `DATABASE_URI`: The URI for connecting to the MongoDB database.
+    - `MONGO_USERNAME`: MongoDB username for authentication.
+    - `MONGO_PASSWORD`: MongoDB password for authentication.
+    - `MONGO_INITDB_DATABASE`: The name of the MongoDB database to be initialized.
+    - `MONGO_INITDB_COLLECTION`: The name of the MongoDB collection to be initialized.
+    - `MONGO_INITDB_ROOT_USERNAME`: MongoDB root username for initial setup.
+    - `MONGO_INITDB_ROOT_PASSWORD`: MongoDB root password for initial setup.
+    - `REACT_APP_API_PORT`: Port number for the API service.
+- Docker Compose: Make sure you have Docker Compose installed.
+
+### Setup using docker compose
+
+The `docker-compose.yml` file contains the necessary configurations to set up the MongoDB database and API service. The application consists of the following services:
+
+1. `mongo`: This service sets up a MongoDB container using the official `mongo:latest` image. The database will be initialized with the provided environment variables from the `.env` file.
+
+2. `mongo-seed`: This service builds a custom Docker image using the `./realm-db` directory and the `Dockerfile` within it. It depends on the `mongo` service, ensuring that the database is running before running the seed script. The seed script populates the MongoDB database with initial data.
+
+3. `api`: This service builds a custom Docker image using the `./realm-api` directory. It depends on the `mongo` service to ensure the database is accessible before starting the API. The service exposes port 7070 for the API, and the environment variables required for the API are loaded from the `.env` file.
+
+4. `networks`: This section defines a custom network called `realm` to facilitate communication between the containers. It is set as an external network.
+
+### Setup Instructions
+
+Follow these steps to set up and deploy the application:
+
+1. Create the `.env` file: Ensure you have all the required environment variables defined in the `.env` file in the project root directory.
+
+2. Build and run the services: Open a terminal or command prompt, navigate to the project directory containing the `docker-compose.yml` file, and run the following command:
+
+   ```bash
+   docker-compose up --build -d
+
+This command will build the custom Docker images for the mongo-seed and api services, and then run all the services in detached mode (-d)
+
+### Local setup 
+Using the run.sh script from the root directory simplifies the process of setting up the entire application by automating the steps required to start the MongoDB database, 
+API service, and client application. The script combines the necessary commands to run the docker-compose setup for the database and API and then launches the client application.
+
+
 ## Contributing
 
 We welcome contributions from the community! To contribute to Realm: End of Era, please follow these steps:
