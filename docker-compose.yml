@@ -1,0 +1,62 @@
+version: '3'
+services:
+  mongo:
+    container_name: mongodb
+    image: mongo:latest
+    env_file:
+      - .env
+    ports:
+      - "27017:27017"
+    networks:
+      - "realm"
+    volumes:
+      - ./mongod.conf:/etc/mongod.conf
+#    command: >
+#      bash -c '
+#      mongod --config /etc/mongod.conf '
+
+  mongo-seed:
+    env_file:
+      - .env
+    build:
+      context: ./realm-db
+      dockerfile: Dockerfile
+      args:
+        - DATABASE_URI=$DATABASE_URI
+        - USERNAME=$MONGO_USERNAME
+        - PASSWORD=$MONGO_PASSWORD
+        - MONGO_INITDB_DATABASE=$MONGO_INITDB_DATABASE
+        - MONGO_INITDB_COLLECTION=$MONGO_INITDB_COLLECTION
+    depends_on:
+      - mongo
+    networks:
+      - "realm"
+  api:
+    build:
+      context: ./realm-api
+    container_name: realm-api
+    ports:
+      - "7070:7070"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
+      - MONGO_INITDB_COLLECTION=${MONGO_INITDB_COLLECTION}
+      - MONGO_USERNAME=${MONGO_USERNAME}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - REACT_APP_API_PORT=${REACT_APP_API_PORT}
+      - DATABASE_URI=${DATABASE_URI}
+    networks:
+      - "realm"
+    depends_on:
+      - mongo
+    volumes:
+        - ./realm-db/cards/img:/cards/img
+
+networks:
+  realm:
+    external: true
+
+
+
+

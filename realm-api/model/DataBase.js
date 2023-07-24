@@ -8,6 +8,7 @@ class Database {
     }
 
     connect() {
+        console.log(this.databaseURI, this.databaseName);
         return mongoose.connect(this.databaseURI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,

@@ -1,6 +1,6 @@
 {
   "name": "realm-client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -47,4 +47,5 @@
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3"
   }
+
 }

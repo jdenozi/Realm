@@ -3,11 +3,18 @@ import Card from "../cards/Card";
 import "./Inventory.css";
 import "../../assets/css/style.css";
 
+const REACT_APP_API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const REACT_APP_API_PORT = process.env.REACT_APP_API_PORT;
+
 function Inventory() {
     const [cards, setCards] = useState([]);
 
+    if(REACT_APP_API_BASE_URL === undefined || REACT_APP_API_PORT === undefined){
+        throw new Error("Environment variable isn´t set");
+    }
+
     useEffect(() => {
-        fetch("http://localhost:8080/cards", {
+        fetch(`${REACT_APP_API_BASE_URL}:${REACT_APP_API_PORT}/cards`, {
             headers: {
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*",
@@ -17,13 +24,13 @@ function Inventory() {
             .then((data) => {
                 setCards(data);
                 for (const card of data) {
-                    console.log("Card name", card.name);
-                    card.imageUrl = `http://localhost:8080/cardsArtwork/${card.id}`;
+                    card.imageUrl =`${REACT_APP_API_BASE_URL}:${REACT_APP_API_PORT}/cardsArtwork/${card.image}`
+                    console.log(card.img)
                 }
                 setCards([...data]);
             })
             .catch((error) => {
-                console.error("Error fetching card data:", error);
+                console.error("Error fetching card realm-db:", error);
             });
     }, []);
 
@@ -43,7 +50,7 @@ function Inventory() {
                         defense={card.defense}
                         manaCost={card.manaCost}
                         foil={card.foil}
-                        imageUrl={card.imageUrl} // Pass the imageUrl as a prop to Card component
+                        imageUrl={card.imageUrl}
                     />
                 ))}
             </div>

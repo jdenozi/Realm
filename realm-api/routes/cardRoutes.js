@@ -7,7 +7,7 @@ const cardRouter = async function (request, response) {
             const cards = await Cards.find();
             // set the status code and content-type
             response.writeHead(200, { "Content-Type": "application/json" });
-            // send the data
+            // send the realm-db
             response.end(JSON.stringify(cards));
         } catch (error) {
             response.writeHead(500, { "Content-Type": "text/plain" });
@@ -30,7 +30,7 @@ const cardRouter = async function (request, response) {
                 const contentType = `image/${ext}`;
 
                 // send the image file
-                const imagePath = path.join(__dirname, "../../data/cards/", card.image);
+                const imagePath = path.join(__dirname, "../../realm-db/cards/", card.image);
                 response.sendFile(imagePath);
             } else {
                 response.writeHead(404, { "Content-Type": "text/plain" });

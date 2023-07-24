@@ -1575,4 +1575,78 @@
     }
   ]
 }
+,
+  {
+    "id": 46,
+    "hash": 0,
+    "name": "Knight protector",
+    "type": "invocation",
+    "description": "",
+    "quote": "",
+    "quoteAuthor": "",
+    "attack": 3,
+    "defense": 3,
+    "manaCost": 1,
+    "image": "img/046-knight-protector.jpeg",
+    "habitat": "castle",
+    "family": "human",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "equip",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+      {
+        "action": "up",
+        "target": ["attack"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
+    ]
+  }
+,
+  {
+    "id": 47,
+    "hash": 0,
+    "name": "Pride",
+    "type": "spell",
+    "description": "Cancels the destruction of an invocation or ritual. The saved card becomes indestructible during this turn.",
+    "quote": "",
+    "quoteAuthor": "",
+    "attack": 3,
+    "defense": 3,
+    "manaCost": 1,
+    "image": "img/046-knight-protector.jpeg",
+    "habitat": "castle",
+    "family": "human",
+    "monsterCost": 1,
+    "visionCost": 1,
+    "equipmentCost": 0,
+    "tokens": [
+      {
+        "action": "equip",
+        "target": ["invocation", "ritual"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      },
+      {
+        "action": "up",
+        "target": ["attack"],
+        "number": "+1",
+        "from": [""],
+        "to": [""],
+        "temporality": "now"
+      }
+    ]
+  }
 ]
