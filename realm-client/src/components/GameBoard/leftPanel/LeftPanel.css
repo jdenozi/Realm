@@ -1,0 +1,33 @@
+.left-panel {
+    flex: 1;
+    width: 15%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Change the flex direction to column */
+}
+
+.info-photo-card {
+    margin-top: 2rem;
+    height: calc(var(--card-height) * 0.8);;
+    width: calc(var(--card-width) * 0.8);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.info-card {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex: 1; /* Make the info card take the remaining available space */
+    height: var(--card-height);
+    width: var(--card-width);
+    min-height: 30rem;
+    max-width: 300rem;
+    color: white;
+    background-color: #00000055;
+    border-color: var(--frame-color);
+    border-style: solid;
+    border-radius: 5px;
+}

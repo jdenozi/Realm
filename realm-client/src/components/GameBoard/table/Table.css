@@ -1,0 +1,46 @@
+:root {
+    --play-card-width: 10rem;
+    --play-card-height: calc(var(--card-height) / 2);
+}
+
+
+.table {
+    flex: 5;
+    perspective: 2000px;
+    width: 100%;
+    max-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.field {
+    margin-top: -7rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 40, 0.4);
+    transform: rotateX(60deg);
+}
+
+.row {
+    display: flex;
+}
+
+.playCard {
+    height: var(--play-card-height);
+    width: var(--play-card-width);
+    border-color: #d9dadb;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.playCard:hover {
+    cursor: pointer;
+    border-width: 5px;
+    background-color: whitesmoke;
+    border-color: yellowgreen;
+    opacity: 0.1;
+    border-style: solid;
+
+}

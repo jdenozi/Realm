@@ -51,7 +51,7 @@ services:
     depends_on:
       - mongo
     volumes:
-        - ./realm-db/cards/img:/cards/img
+        - ./realm-db/cards/img:/cards/
 
 networks:
   realm:

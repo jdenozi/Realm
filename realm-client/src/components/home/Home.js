@@ -3,6 +3,8 @@ import './Home.css';
 import Connection from './connection/Connection';
 import Menu from './menu/Menu';
 import Inventory from "../inventory/Inventory";
+import GameBoard from "../GameBoard/GameBoard";
+
 import '../../assets/css/style.css';
 
 const Home = () => {
@@ -14,8 +16,8 @@ const Home = () => {
         }
     };
 
-    const handleMenuButtonClick = () => {
-        setCurrentComponent('Inventory');
+    const handleMenuButtonClick = (component) => {
+        setCurrentComponent(component);
     };
 
     useEffect(() => {
@@ -85,15 +87,14 @@ const Home = () => {
     }, [currentComponent]);
 
     return (
-
         <div style={{ position: 'relative' }}>
             <canvas id="ashesCanvas" ref={canvasRef}></canvas>
             <section id="home" className="home" onKeyDown={handleKeyPress} tabIndex={0} style={{ position: 'absolute', top: 0, left: 0 }}>
-                <h1 className="title">Realm</h1>
-                <h2 className="subtitle">End of the era</h2>
                 {currentComponent === 'Connection' && <Connection />}
                 {currentComponent === 'Menu' && <Menu handleButtonClick={handleMenuButtonClick} />}
                 {currentComponent === 'Inventory' && <Inventory />}
+                {currentComponent === 'GameBoard' && <GameBoard />}
+
             </section>
         </div>
 

@@ -6,14 +6,28 @@ const cardRouter = async function (request, response) {
         try {
             const cards = await Cards.find();
             // set the status code and content-type
-            response.writeHead(200, { "Content-Type": "application/json" });
+            response.writeHead(200, {"Content-Type": "application/json"});
             // send the realm-db
             response.end(JSON.stringify(cards));
         } catch (error) {
-            response.writeHead(500, { "Content-Type": "text/plain" });
+            response.writeHead(500, {"Content-Type": "text/plain"});
             response.end("Internal Server Error");
         }
-    } else if (request.url.startsWith("/cardsArtwork/") && request.method === "GET") {
+    }else if (request.url.startsWith("/card/") && request.method === "GET"){
+        // Extract the image ID from the URL
+        const imageId = path.basename(request.url);
+
+        // Retrieve the card by ID
+        const card = await Cards.findOne({ id: imageId });
+
+        // Set the status code and content-type
+        response.writeHead(200, {"Content-Type": "application/json"});
+
+        // Send the realm-db
+        response.end(JSON.stringify(card));
+
+
+    }else if (request.url.startsWith("/cardsArtwork/") && request.method === "GET") {
         try {
             // Extract the image ID from the URL
             const imageId = path.basename(request.url);

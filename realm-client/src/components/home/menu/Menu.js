@@ -59,7 +59,8 @@ const Menu = ({ handleButtonClick }) => {
                     className="m-button"
                     onMouseEnter={() => handleButtonHover('play-game')}
                     onMouseLeave={() => handleButtonHover('')}
-                >
+                    onClick={() => handleClick('GameBoard')}
+                    >
                     <p className="button-text">Play game</p>
                 </button>
 

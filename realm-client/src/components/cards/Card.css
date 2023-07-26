@@ -1,13 +1,16 @@
 :root {
-    --card-height: 50vh;
+    --card-height: 30rem;
     --card-width: calc(var(--card-height) / 1.5);
-    --card-border-color: #000;
+    --card-border-color: #191c29 ;
     --card-border-thickness: 14px;
     --card-border-radius: 10px;
     --bars-background: #debca7;
     --inner-borders-color: #bd4129;
     --inner-borders-thickness: 3px;
     --bar-color-border: var(--bars-background);
+    --card-title-font: 0.9rem;
+    --card-description-font: 0.7rem;
+
 }
 
 .card {
@@ -65,7 +68,7 @@
     letter-spacing: 1px;
     color: black;
     font-family: "SF Mono Regular", monospace;
-    font-size: 1.1em;
+    font-size: var(--card-title-font);
 }
 
 .icon {
@@ -98,7 +101,7 @@
     height: 25%;
     box-shadow: 0 0 0 var(--inner-borders-thickness) black;
     background-color: var(--bars-background);
-    font-size: 0.7em;
+    font-size: var(--card-description-font);
     border-radius: 3% / 10%;
     text-align: justify;
     padding: 7px;
@@ -194,6 +197,13 @@
 
 .card.equipment {
     background-color: #D9DADB;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: blanchedalmond;
+    border-color: yellowgreen;
+    top:-20px;
 }
 
 

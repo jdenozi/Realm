@@ -1,0 +1,48 @@
+:root {
+    --user-card-height: 17rem;
+    --user-card-width: calc(var(--user-card-height) / 1.5);
+    --opponent-card-height: 8rem;
+    --opponent-card-width: calc(var(--opponent-card-height) / 1.5);
+    --hand-card-hover-resize: 1.2;
+    --hand-card-border-thickness: 7px;
+    --hand-card-title-font: 0.6rem;
+    --hand-card-description-font: 0.5rem;
+}
+
+.opponent-hand,
+.user-hand {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.user-hand {
+    flex: 2;
+}
+.opponent-hand {
+    flex: 1;
+}
+
+.hand-card {
+    height: var(--opponent-card-height);
+    width: var(--opponent-card-width);
+    margin: 5px;
+    border-color: transparent;
+    border-width: 6px;
+    border-radius: 5px;
+    border-style: solid;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #191c29;
+    background-image: url("../assets/back-magic.jpg");
+}
+
+
+.hand-card:hover{
+    cursor: pointer;
+    border-color: yellowgreen;
+}

@@ -25,7 +25,6 @@ function Inventory() {
                 setCards(data);
                 for (const card of data) {
                     card.imageUrl =`${REACT_APP_API_BASE_URL}:${REACT_APP_API_PORT}/cardsArtwork/${card.image}`
-                    console.log(card.img)
                 }
                 setCards([...data]);
             })

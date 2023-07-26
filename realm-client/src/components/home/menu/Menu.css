@@ -3,12 +3,9 @@
     border: 2px solid white;
     cursor: pointer;
     backdrop-filter: blur(5px);
-    transition: 0.2s;
-    position: relative;
     padding: 1rem;
     width: 100%;
     height: 100%;
-    margin-top: 5rem;
 }
 
 .button-grid{
@@ -48,7 +45,6 @@
     font-size: 1rem;
     color: #ffffff;
 }
-
 
 canvas {
     width: 100vw;

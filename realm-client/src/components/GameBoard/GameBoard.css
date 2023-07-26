@@ -1,0 +1,20 @@
+:root {
+    font-size: 16px; /* Adjust as needed */
+}
+
+.container {
+    display: flex;
+    min-width: 100vh;
+    min-height: 100vh;
+    background-image: url("assets/space.jpg");
+}
+
+.game-board {
+    flex: 5;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

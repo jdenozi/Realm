@@ -16,15 +16,8 @@ const PORT = process.env.REACT_APP_API_PORT;
 // Enable CORS for all routes
 app.use(cors());
 
-// Serve the static files, including images
-app.use('/cardsArtwork', express.static(path.join(__dirname, '/cards'), {
-    setHeaders: (res, filePath) => {
-        const extension = path.extname(filePath).toLowerCase();
-        if (['.jpg', '.jpeg'].includes(extension)) {
-            res.setHeader('Content-Type', 'image/jpeg');
-        }
-    },
-}));app.use('/', cardRouter);
+app.use('/cardsArtwork', express.static( '../cards'));
+app.use('/', cardRouter);
 
 database.connect()
     .then(() => {

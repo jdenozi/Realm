@@ -1,13 +1,13 @@
 .container {
-    width: 100%; /* Ensure the parent container expands to fit the grid */
-
-
+    width: 96%; /* Ensure the parent container expands to fit the grid */
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: 10fr 10fr 10fr 10fr 10fr;
+    gap: 1% 1%;
     justify-items: center;
 }
 
