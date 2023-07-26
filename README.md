@@ -1,6 +1,6 @@
 # Realm: End of Era (Currently in development)
 
-![Realm: End of Era](realm-overlay.png)
+![Realm: End of Era](game.gif)
 
 Realm: End of Era is an immersive trading card game set in a fantastical world where players engage in strategic battles, collect powerful cards, and unravel the mysteries of the ancient realms. This game is built using React for the front-end and Node.js for the back-end.
 
